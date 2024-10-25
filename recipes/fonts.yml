@@ -5,5 +5,9 @@ fonts:
     - Terminus
     - FiraCode
     - JetBrainsMono
+    - IBMPlexMono
+    - Iosevka
+    - IosevkaTerm
   google-fonts:
     - Roboto
+    - Inter
