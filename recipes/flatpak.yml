@@ -1,0 +1,16 @@
+type: default-flatpaks
+notify: true
+system:
+  repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+  repo-name: flathub
+  repo-title: "Flathub"
+  install:
+    - io.podman_desktop.PodmanDesktop
+    - org.mozilla.firefox
+    - com.obsproject.Studio
+    - org.kde.krita
+    - org.kde.haruna
+    - dev.vencord.Vesktop
+    - com.valvesoftware.Steam
+    - io.freetubeapp.FreeTube
+    - sh.ppy.osu

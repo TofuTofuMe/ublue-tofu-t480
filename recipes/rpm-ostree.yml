@@ -1,0 +1,16 @@
+type: rpm-ostree
+repos:
+  - https://copr.fedorainfracloud.org/coprs/abn/throttled/repo/fedora-%OS_VERSION%/abn-throttled-fedora-%OS_VERSION%.repo
+  - https://download.opensuse.org/repositories/home:/mkittler/Fedora_%OS_VERSION%/home:mkittler.repo
+  - vscode.repo
+install:
+  - throttled
+  - syncthing
+  - syncthingplasmoid-qt6
+  - code
+  - papirus-icon-theme
+  - keepassxc
+remove:
+  - thermald
+  - firefox
+  - firefox-langpacks

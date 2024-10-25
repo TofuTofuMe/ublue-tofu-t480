@@ -1,0 +1,9 @@
+type: fonts
+fonts:
+  nerd-fonts:
+    - Hack
+    - Terminus
+    - FiraCode
+    - JetBrainsMono
+  google-fonts:
+    - Roboto
