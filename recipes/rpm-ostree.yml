@@ -5,12 +5,21 @@ repos:
   - vscode.repo
 install:
   - throttled
+  - lm_sensors
+  - powertop
+  - python3-pip
+  - python3-wheel
+  - android-tools
+  - samba
   - syncthing
   - syncthingplasmoid-qt6
   - code
-  - papirus-icon-theme
   - keepassxc
+  - papirus-icon-theme
+  - papirus-icon-theme-light
+  - papirus-icon-theme-dark
 remove:
   - thermald
   - firefox
   - firefox-langpacks
+  - plasma-welcome
