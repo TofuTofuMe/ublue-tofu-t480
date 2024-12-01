@@ -2,7 +2,7 @@ name: ublue-tofu-t480
 description: Universal Blue Kinoite for personal use with the ThinkPad T480
 
 base-image: ghcr.io/ublue-os/kinoite-main
-image-version: 40
+image-version: 41
 
 modules:
   - type: files
