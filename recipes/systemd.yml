@@ -2,7 +2,3 @@ type: systemd
 system:
   enabled:
     - throttled
-  disabled:
-user:
-  enabled:
-  disabled:
