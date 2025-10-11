@@ -1,21 +1,23 @@
 type: default-flatpaks
-notify: true
-system:
-  repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
-  repo-name: flathub
-  repo-title: "Flathub"
-  install:
-    - io.podman_desktop.PodmanDesktop
-    - org.mozilla.firefox
-    - com.obsproject.Studio
-    - org.kde.krita
-    - org.kde.haruna
-    - org.kde.okular
-    - org.kde.gwenview
-    - org.kde.skanpage
-    - org.kde.kdenlive
-    - org.kde.kolourpaint
-    - dev.vencord.Vesktop
-    - com.valvesoftware.Steam
-    - io.freetubeapp.FreeTube
-    - sh.ppy.osu
+configurations:
+  - notify: true
+    scope: system
+    repo:
+      url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      name: flathub
+      title: "Flathub"
+    install:
+      - io.podman_desktop.PodmanDesktop
+      - org.mozilla.firefox
+      - com.obsproject.Studio
+      - org.kde.krita
+      - org.kde.haruna
+      - org.kde.okular
+      - org.kde.gwenview
+      - org.kde.skanpage
+      - org.kde.kdenlive
+      - org.kde.kolourpaint
+      - dev.vencord.Vesktop
+      - com.valvesoftware.Steam
+      - io.freetubeapp.FreeTube
+      - sh.ppy.osu
