@@ -20,4 +20,5 @@ configurations:
       - dev.vencord.Vesktop
       - com.valvesoftware.Steam
       - io.freetubeapp.FreeTube
+      - org.prismlauncher.PrismLauncher
       - sh.ppy.osu
