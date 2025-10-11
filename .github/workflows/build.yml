@@ -37,26 +37,16 @@ jobs:
           maximize_build_space: true
 
       - name: Build ISO
-        uses: jasonn3/build-container-installer@main
         id: build
+        uses: ublue-os/titanoboa@main
         with:
-          arch: ${{ env.ARCH }}
-          image_name: ${{ env.IMAGE_NAME }}
-          image_repo: ${{ env.IMAGE_REPO }}
-          image_tag: ${{ env.IMAGE_TAG }}
-          version: ${{ env.VERSION }}
-          variant: ${{ env.VARIANT }}
-          iso_name: ${{ env.IMAGE_NAME }}-${{ env.IMAGE_TAG }}-${{ env.VERSION }}.iso
+          image-ref: ${{ env.IMAGE_REPO }}:latest
+          compression: ${{ env.COMPRESSION }}
+          builder-distro: fedora
 
-      - name: Upload ISO as artifact
-        id: upload
-        uses: actions/upload-artifact@v4
-        with:
-          name: ${{ steps.build.outputs.iso_name }}
-          path: |
-            ${{ steps.build.outputs.iso_path }}/${{ steps.build.outputs.iso_name }}
-            ${{ steps.build.outputs.iso_path }}/${{ steps.build.outputs.iso_name }}-CHECKSUM
-          if-no-files-found: error
-          retention-days: 0
-          compression-level: 0
+      - name: Rename and Checksum ISO
+        run: |
+          mkdir -p output
+          mv ${{ steps.build.outputs.iso-dest }} output/${{ env.ISO_NAME }}.iso
+          (cd output && sha256sum ${{ env.ISO_NAME }}.iso | tee ${{ env.ISO_NAME }}.iso-CHECKSUM)
 
