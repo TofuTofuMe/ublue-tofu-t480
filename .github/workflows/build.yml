@@ -40,13 +40,13 @@ jobs:
         id: build
         uses: ublue-os/titanoboa@main
         with:
-          image-ref: ${{ env.IMAGE_REPO }}:latest
-          compression: ${{ env.COMPRESSION }}
+          image-ref: ${{ vars.IMAGE_REPO }}:latest
+          compression: ${{ vars.COMPRESSION }}
           builder-distro: fedora
 
       - name: Rename and Checksum ISO
         run: |
           mkdir -p output
-          mv ${{ steps.build.outputs.iso-dest }} output/${{ env.ISO_NAME }}.iso
-          (cd output && sha256sum ${{ env.ISO_NAME }}.iso | tee ${{ env.ISO_NAME }}.iso-CHECKSUM)
+          mv ${{ steps.build.outputs.iso-dest }} output/${{ vars.ISO_NAME }}.iso
+          (cd output && sha256sum ${{ vars.ISO_NAME }}.iso | tee ${{ vars.ISO_NAME }}.iso-CHECKSUM)
 
