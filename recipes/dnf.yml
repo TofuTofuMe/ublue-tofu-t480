@@ -1,0 +1,27 @@
+type: dnf
+repos:
+  files:
+    - https://copr.fedorainfracloud.org/coprs/abn/throttled/repo/fedora-%OS_VERSION%/abn-throttled-fedora-%OS_VERSION%.repo
+    - https://download.opensuse.org/repositories/home:/mkittler/Fedora_%OS_VERSION%/home:mkittler.repo
+    - vscode.repo
+install:
+  packages:
+    - throttled
+    - lm_sensors
+    - powertop
+    - python3-pip
+    - python3-wheel
+    - android-tools
+    - samba
+    - syncthing
+    - syncthingplasmoid-qt6
+    - code
+    - keepassxc
+    - papirus-icon-theme
+    - papirus-icon-theme-light
+    - papirus-icon-theme-dark
+remove:
+  packages:
+    - thermald
+    - firefox
+    - firefox-langpacks
