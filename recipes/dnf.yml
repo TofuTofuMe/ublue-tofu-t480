@@ -19,6 +19,8 @@ install:
     - syncthingplasmoid-qt6
     - code
     - keepassxc
+    - easyeffects
+    - yakuake
     - papirus-icon-theme
     - papirus-icon-theme-light
     - papirus-icon-theme-dark
