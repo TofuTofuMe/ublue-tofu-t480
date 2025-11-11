@@ -1,4 +1,4 @@
-type: dnf
-install:
-  packages:
-    - kmod-v4l2loopback
+# type: dnf
+# install:
+#   packages:
+#     - kmod-v4l2loopback

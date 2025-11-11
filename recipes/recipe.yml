@@ -10,7 +10,8 @@ modules:
       - source: system
         destination: /
   - from-file: dnf.yml
-  - from-file: rpmfusion.yml
+  - from-file: akmods.yml
+  # - from-file: rpmfusion.yml
   - from-file: flatpak.yml
   - from-file: systemd.yml
   - from-file: fonts.yml
