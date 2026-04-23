@@ -2,6 +2,7 @@ type: dnf
 repos:
   files:
     - https://copr.fedorainfracloud.org/coprs/abn/throttled/repo/fedora-%OS_VERSION%/abn-throttled-fedora-%OS_VERSION%.repo
+    - https://copr.fedorainfracloud.org/coprs/sneexy/python-validity/repo/fedora-%OS_VERSION%/sneexy-python-validity-fedora-%OS_VERSION%.repo
     - https://download.opensuse.org/repositories/home:/mkittler/Fedora_%OS_VERSION%/home:mkittler.repo
     - vscode.repo
 install:
@@ -10,6 +11,10 @@ install:
     - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-%OS_VERSION%.noarch.rpm
     - throttled
     - lm_sensors
+    - open-fprintd
+    - fprintd-clients
+    - fprintd-clients-pam
+    - python3-validity
     - powertop
     - python3-pip
     - python3-wheel
