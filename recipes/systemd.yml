@@ -2,3 +2,4 @@ type: systemd
 system:
   enabled:
     - throttled
+    - python3-validity
